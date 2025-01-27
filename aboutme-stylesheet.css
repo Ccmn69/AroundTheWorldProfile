@@ -3,12 +3,12 @@ body {
     background-color: black;
     color: white;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
 }
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 120px;
+    font-size: 80px;
 }
 
 @keyframes starwarstyle {
@@ -29,7 +29,7 @@ h1 {
 .aboutmecontent {
     animation: starwarstyle 10s ease forwards;
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -50,18 +50,17 @@ h1 {
     visibility: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start, flex-end;
+    justify-content: flex-start;
     margin-top: 0px;
     gap: 10px;
 }
 
 .dog {
-    width: 1200px; 
+    width: 900px; 
     height: auto;
 }
 
 .dogmessage {
     color: white;
     font-size: 90px;
-    margin: 0px;
 }
