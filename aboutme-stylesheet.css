@@ -1,0 +1,67 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 120px;
+}
+
+@keyframes starwarstyle {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.aboutmecontent {
+    animation: starwarstyle 10s ease forwards;
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+@keyframes revealmessage {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.dog-container {
+    animation: revealmessage 1s ease 10s forwards;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start, flex-end;
+    margin-top: 0px;
+    gap: 10px;
+}
+
+.dog {
+    width: 1200px; 
+    height: auto;
+}
+
+.dogmessage {
+    color: white;
+    font-size: 90px;
+    margin: 0px;
+}

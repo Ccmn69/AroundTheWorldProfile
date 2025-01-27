@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>World Map</title>
+    <link rel="stylesheet" type="text/css" href="worldmap-stylesheet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- google geochart reference: 
+    GeoChart (2025). https://developers.google.com/chart/interactive/docs/gallery/geochart#coloring-your-chart. -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            var data = google.visualization.arrayToDataTable([
+                ['Country', { role: 'tooltip' }],
+                ['Australia', 'Living in Sydney for 3.5 years now!'],
+                ['Japan', 'Visited Kagoshima, Kumamoto, Okinawa, Hokkaido. The best trip is skiing in Hokaido, its my first time seeing real snow. The next place I want to visit is Osaka, I have been wanting to visit Universal Studio. *Mario themed park only exisit there*'],
+                ['Italy', '[Bucket List] I need to try the authentic no pineapple pizza, and of course, carbonara as well'],
+                ['Egypt', '[Bucket List] the PYRAMIDSSSS!!!'],
+                ['Taiwan', 'Visited Taipei for 3 times, the night markets the best!! The games r super fun! I recommend eating pineapple cakes and beef noodles.'],
+                ['New Zealand', '[Bucket List] I have got to visit the Hobbiton Movie Set and take tons of pics'],
+                ['China', 'Went to Beijing in 2009 when they host the Olympics'],
+                ['Iceland', '[Bucket List] the NORTHERN LIGHTSSS!!!'],
+                ['Tanzania', '[Bucket List] Want to pet a lion'],
+                ['Netherlands', '[Bucket List] the Tulip fields is so pretty'],
+                ['Singapore', 'Went there in 2012'],
+                ['Malaysia', 'Went there in 2012'],
+                ['Macau', 'Went there every year before COVID-19 hits. The portuguese egg tart is super delicious and the hotels there are super comfy'],
+                ['Thailand', 'I love the fish market where you get to eat and buy stuff on a boat, the temple there are extremely pretty. I have also tried Dr. Fish, felt weird but its fun.'],
+                ['Antarctica', '[Bucket List] the PENGUINSSS!!!'],
+                ['South Korea', '[Bucket List] Want to visit their traditional buildings']
+            ]);
+
+            var options = {
+                backgroundColor: 'black',
+                datalessRegionColor: '#333333',
+                tooltip: { isHtml: true },
+                defaultColor: '#ffffff',
+                region: 'world',
+            };
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Places I've Visited + In My Bucket List</h1>
+    <div id="regions_div"></div>
+
+    <!-- redirect to about me page -->
+    <a href="aboutme.html">
+        <img src="/Users/carysycc/Downloads/planenobg.png" alt="planenobg" class="plane">
+    </a>
+
+    <!-- message reveal after the plane is off screen -->
+    <div class="planemessage">
+        too slow, click before it disappears
+    </div>
+</body>
+</html>

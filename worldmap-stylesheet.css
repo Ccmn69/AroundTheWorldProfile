@@ -1,0 +1,51 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#regions_div {
+    width: 65vw;
+    height: 65vh;
+    margin-top: 90px;
+    margin-left: 320px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes slideltor {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(100vw);}
+}
+
+.plane {
+    animation: slideltor 6s ease forwards;
+    width: 250px; 
+    height: auto; 
+    margin-left: 20px;
+}
+
+@keyframes revealmessage {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.planemessage {
+    animation: revealmessage 1s ease 7s forwards;
+    visibility: hidden;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+    justify-content: right, baseline;
+}
