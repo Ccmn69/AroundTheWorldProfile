@@ -27,7 +27,7 @@ h1 {
 }
 
 .aboutmecontent {
-    animation: starwarstyle 10s ease forwards;
+    animation: starwarstyle 20s ease forwards;
     display: inline-block;
     font-size: 20px;
     margin-left: 50px;
@@ -46,7 +46,7 @@ h1 {
 }
 
 .dog-container {
-    animation: revealmessage 1s ease 10s forwards;
+    animation: revealmessage 1s ease 20s forwards;
     visibility: hidden;
     display: flex;
     align-items: center;
